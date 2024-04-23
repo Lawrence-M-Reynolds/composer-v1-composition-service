@@ -7,7 +7,6 @@
         <groupId>com.reynolds.composer.v1</groupId>
         <artifactId>composer-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../composer-parent</relativePath>
     </parent>
 
     <artifactId>composition-service</artifactId>
