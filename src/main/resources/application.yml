@@ -1,0 +1,12 @@
+spring.application.name: composition-service
+server.port: 7001
+logging:
+  level:
+    root: INFO
+    web: debug
+    sql: debug
+    com.reynolds: DEBUG
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+---
+spring.config.activate.on-profile: docker
+server.port: 8080
