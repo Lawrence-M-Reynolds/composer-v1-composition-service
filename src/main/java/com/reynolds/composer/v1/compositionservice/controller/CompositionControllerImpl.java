@@ -1,10 +1,9 @@
-package com.reynolds.compositionservice.controller;
+package com.reynolds.composer.v1.compositionservice.controller;
 
-import com.reynolds.api.core.composition.Composition;
-import com.reynolds.api.core.composition.CompositionController;
-import com.reynolds.compositionservice.service.CompositionService;
+import com.reynolds.composer.v1.api.core.composition.composition.Composition;
+import com.reynolds.composer.v1.api.core.composition.composition.CompositionController;
+import com.reynolds.composer.v1.compositionservice.service.CompositionService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 

@@ -1,6 +1,6 @@
-package com.reynolds.compositionservice.dao;
+package com.reynolds.composer.v1.compositionservice.dao;
 
-import com.reynolds.api.core.composition.Composition;
+import com.reynolds.composer.v1.api.core.composition.composition.Composition;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

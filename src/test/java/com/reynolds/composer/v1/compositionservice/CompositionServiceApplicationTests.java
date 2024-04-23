@@ -1,4 +1,4 @@
-package com.reynolds.compositionservice;
+package com.reynolds.composer.v1.compositionservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

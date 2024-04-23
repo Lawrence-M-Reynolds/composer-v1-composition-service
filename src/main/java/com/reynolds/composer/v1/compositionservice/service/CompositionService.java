@@ -1,7 +1,7 @@
-package com.reynolds.compositionservice.service;
+package com.reynolds.composer.v1.compositionservice.service;
 
-import com.reynolds.api.core.composition.Composition;
-import com.reynolds.compositionservice.dao.CompositionRepository;
+import com.reynolds.composer.v1.api.core.composition.composition.Composition;
+import com.reynolds.composer.v1.compositionservice.dao.CompositionRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
