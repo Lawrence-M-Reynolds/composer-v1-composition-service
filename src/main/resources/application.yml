@@ -1,4 +1,4 @@
-spring.application.name: composition-service
+spring.application.name: composer-v1-composition-service
 server.port: 7001
 logging:
   level:
