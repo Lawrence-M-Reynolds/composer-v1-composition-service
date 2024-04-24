@@ -12,8 +12,8 @@
     <artifactId>composition-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>composition-service</name>
-    <description>composition-service</description>
+    <name>composer-v1-composition-service</name>
+    <description>composer-v1-composition-service</description>
 
     <properties>
         <java.version>17</java.version>
