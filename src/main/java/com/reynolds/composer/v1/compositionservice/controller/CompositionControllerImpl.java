@@ -40,4 +40,8 @@ public class CompositionControllerImpl implements CompositionController {
         return compositionService.findAllCompositions();
     }
 
+    @Override
+    public ResponseEntity<Composition> getComposition(long compositionId) {
+        return ResponseEntity.of(compositionService.findCompositionById(compositionId));
+    }
 }
