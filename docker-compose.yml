@@ -4,22 +4,24 @@ services:
   composition:
     build: .
     mem_limit: 512m
+    networks:
+      - composition_network
     ports:
       - "8080:8080"
+    hostname: composition-microservice
     depends_on:
-      database:
+      composition_database:
         condition: service_healthy
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - MYSQL_HOST=database
+      - MYSQL_HOST=composition-database
 
-  database:
+  composition_database:
     image: mysql:8.0.37
     container_name: mysql-composer-composition
-    ports:
-      - "3306:3306"
     networks:
-      - composition
+      - composition_network
+    hostname: composition-database
     environment:
       - MYSQL_DATABASE=db_composition
       - MYSQL_USER=test_user
@@ -32,3 +34,6 @@ services:
       retries: 100
     volumes:
       - .\DbData:/var/lib/mysql
+
+networks:
+  composition_network: {}
