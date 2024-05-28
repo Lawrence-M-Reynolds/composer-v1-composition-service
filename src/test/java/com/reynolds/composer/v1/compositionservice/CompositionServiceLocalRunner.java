@@ -1,5 +1,6 @@
 package com.reynolds.composer.v1.compositionservice;
 
+import com.reynolds.composer.v1.AbstractComposerLocalDevTestcontainersConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -19,11 +20,14 @@ public class CompositionServiceLocalRunner {
     }
 
     @TestConfiguration(proxyBeanMethods = false)
-    static private class LocalDevTestcontainersConfig {
+    static private class LocalDevTestcontainersConfig extends AbstractComposerLocalDevTestcontainersConfig {
         @Bean
         @ServiceConnection
         public MySQLContainer<?> mySQLContainer() {
-            return  new MySQLContainer<>("mysql:8.0.37");
+            var container = new MySQLContainer<>("mysql:8.0.37");
+            this.configureContainer(container);
+            return container;
         }
     }
 }
+
